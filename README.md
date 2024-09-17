@@ -1,35 +1,41 @@
 ## Generate RYF data files
 
 
-On Leonardo assume to create and activate virtual environment for RYF calculation:
+# On Leonardo assume to create and activate virtual environment
 
 
 First start up an interactive job on Gadi to get enough memory:
 In my case I do the following:
 
-alias access="source ~/ACCESS-NRI/spack-config/spack-enable.bash"
+```bash
 source ~/cosimaenv/bin/activate
+```
 
 The python .cgf file in the ~/cosimaenv/pyvenv.cfg looks as:
 
+```bash
 14:45 $ more ~/cosimaenv/pyvenv.cfg 
 home = /leonardo/prod/spack/5.2/install/0.21/linux-rhel8-icelake/gcc-8.5.0/python-3.11.6-i5k3c6ggftqkzgqyymfbkynpgm2lgjtd/bin
 include-system-site-packages = false
 version = 3.11.6
 executable = /leonardo/prod/spack/5.2/install/0.21/linux-rhel8-icelake/gcc-8.5.0/python-3.11.6-i5k3c6ggftqkzgqyymfbkynpgm2lgjtd/bin/python3.11
 command = /leonardo/prod/spack/5.2/install/0.21/linux-rhel8-icelake/gcc-8.5.0/python-3.11.6-i5k3c6ggftqkzgqyymfbkynpgm2lgjtd/bin/python -m venv ~/cosimaenv
+```
 
 
-Also probably for some modules it is requiered to do load spack modules (e.g. for ncview)
+Also probably for some modules it is requiered to do load **spack module** (e.g. for ncview)
 
+```bash
 module load spack
+```
 
 Then if some packages are missing, just do 
 
+```bash
 pip install package
+```
 
-
-This script only does RYF for 1990_1991 year, as it has been shown as optimal year for RYS in 
+This script only does RYF for 1990_1991 year, as it has been shown as optimal year for RYS ( 
 
 
 ----- THIS PART OF THE README HAS NOT BEEN MODIFIED ------
